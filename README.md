@@ -2,7 +2,7 @@
 
 This repository contains the TensorFlow (1.2) implementation of the paper "Deep End-to-End Alignment and Refinement for Time-of-Flight RGB-D modules". This implementation has been tested on Ubuntu 14.04. with CUDA 8.0.
 
-To use it, we suggest to first create your python virtual environment, and install the requirements by
+To use it, first create your python virtual environment, and install the requirements by
 ```
 pip install -r requirements.txt
 ```
