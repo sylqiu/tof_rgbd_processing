@@ -1,6 +1,6 @@
 # Deep End-to-End Alignment and Refinement for Time-of-Flight RGB-D modules
 
-This repository contains the implementation of the paper "Deep End-to-End Alignment and Refinement for Time-of-Flight RGB-D modules". This implementation has been tested on Ubuntu 14.04. with CUDA 8.0.
+This repository contains the TensorFlow (1.2) implementation of the paper "Deep End-to-End Alignment and Refinement for Time-of-Flight RGB-D modules". This implementation has been tested on Ubuntu 14.04. with CUDA 8.0.
 
 To use it, we suggest to first create your python virtual environment, and install the requirements by
 ```
@@ -16,7 +16,7 @@ Our trained model is provided [here](https://drive.google.com/file/d/1g_189B6AFw
 
 ## ToF FlyingThings3D dataset
 
-TBA
+You can download the dataset [here](https://drive.google.com/open?id=1zfOHZqdTPyZr9QDPSRm-Ru3mUVL4zqbQ). The _loader.py_ file is responsible for loading this dataset. 
 
 -------------------
 For the most updated details about this work, please refer to the [arxiv paper](). If you find this work useful, please cite
