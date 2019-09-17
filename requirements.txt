@@ -1,4 +1,5 @@
 tensorflow-gpu=1.2
+keras
 scikit-image
 scipy
 numpy
