@@ -28,7 +28,6 @@ For the most updated details about this work, please refer to the [arxiv paper](
   booktitle={International Conference in Computer Vision (ICCV)},
   year={2019}
 }
-
 ```
 -------------------
 Disclaimer: This software and related data are published for academic and non-commercial use only.
