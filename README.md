@@ -30,4 +30,6 @@ For the most updated details about this work, please refer to the [arxiv paper](
 }
 
 ```
+-------------------
+Disclaimer: This software and related data are published for academic and non-commercial use only.
 
