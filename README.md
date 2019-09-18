@@ -19,13 +19,13 @@ Our trained model is provided [here](https://drive.google.com/drive/folders/1XAS
 You can download the RGB-Depth dataset (~20GB) [here](https://drive.google.com/drive/folders/1XASaOfcp3TzQJ0A2fMaXex-0eihha0vg?usp=sharing). The _loader.py_ file is responsible for loading this dataset. Since the original transient rendering is too large to host on Drive, we can provide the original blender&pbrt files upon request. Note that our data generation follows the protocol from Su et al. Deep End-to-End Time-of-Flight Imaging, CVPR 2018.
 
 -------------------
-For the most updated details about this work, please refer to the [arxiv paper](). If you find this work useful, please cite
+For the most updated details about this work, please refer to the [arxiv paper](https://arxiv.org/abs/1909.07623). If you find this work useful, please cite
 
 ```
 @inproceedings{qiu2019rgbd,
   title={Deep End-to-End Alignment and Refinement for Time-of-Flight RGB-D modules},
   author={Di Qiu, Jiahao Pang, Wenxiu Sun, Chengxi Yang},
-  booktitle={International Conference in Computer Vision},
+  booktitle={International Conference in Computer Vision (ICCV)},
   year={2019}
 }
 
