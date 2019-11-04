@@ -400,7 +400,7 @@ class NoGtTest(object):
 
 
         if self.perform_calib:
-            camparam = param_buffer_st(self.root + 'calib.bin')
+            camparam = param_buffer_(self.root + 'calib.bin')
             gt_flow, depthR = compute_gtflow_from_depth(camparam, input_D)
             depthR, conf = self.warp_by_flow(gt_flow, depthR)
             imgwL, _ = self.warp_by_flow(gt_flow, imgL)
