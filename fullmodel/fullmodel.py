@@ -38,7 +38,7 @@ class TrainingConfig(object):
 
 
 class TestingConfig(object):
-    def __init__(self, dataset_name):
+    def __init__(self):
         
         self.wlast = '../../checkpoint/ckpt'
         self.output_save_dir ='./results'
@@ -170,7 +170,7 @@ class Model(object):
             self.D, self.L, self.R, self.conf, self.gt_D, self.gt_invflow = queue.dequeue_many(self.bs)
 
         else: # no ground truth deployment
-            if self.use_fifo = True:
+            if self.use_fifo == True:
                 queue = tf.FIFOQueue(40, 
                                     ['float32' for i in range(4)],
                                     shapes=[
@@ -182,10 +182,10 @@ class Model(object):
                 self.enqueue_op = queue.enqueue([self.i_D, self.i_L, self.i_R, self.i_conf])
                 self.D, self.L, self.R, self.conf = queue.dequeue_many(self.bs)
             else:
-                self.D = tf.placeholder('float32', shape=[1, self.height, self.width, 1], name='i_D')
-                self.L = tf.placeholder('float32', shape=[1, self.height, self.width, 1], name='i_L')
-                self.R = tf.placeholder('float32', shape=[1, self.height, self.width, 3], name='i_R')
-                self.conf = tf.placeholder('float32', shape=[1, self.height, self.width, 1], name='i_conf')
+                self.D = tf.placeholder('float32', shape=[1, self.height, self.width, 1], name='D')
+                self.L = tf.placeholder('float32', shape=[1, self.height, self.width, 1], name='L')
+                self.R = tf.placeholder('float32', shape=[1, self.height, self.width, 3], name='R')
+                self.conf = tf.placeholder('float32', shape=[1, self.height, self.width, 1], name='conf')
 
 
     def _build_loader(self, path, split, mvg_aug, align_flag=False):
