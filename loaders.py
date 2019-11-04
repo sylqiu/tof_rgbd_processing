@@ -353,7 +353,7 @@ class NoGtTest(object):
         self.split = 'test'
         self.files = collections.defaultdict(list)
         self.img_size = img_size
-        self.perform_calib = False
+        self.perform_calib = True
 
 
         for split in ['test']:
