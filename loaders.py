@@ -23,8 +23,6 @@ def get_dataset(dataset_name):
     Dict = {'simtof' : SimulatedToF,
             'real' : RealData,
             'nogt': NoGtTest,
-            'flatd': FLATD,
-            'flat': FLAT,
             'none': None
         }
     return Dict[dataset_name]
