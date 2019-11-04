@@ -164,13 +164,13 @@ def param_buffer_(cam_file):
         param_master['width'] = 640
 
         cam.seek(216)
-        param_depth['fx'] = struct.unpack('d', cam.read(8))[0] * 1.005
+        param_depth['fx'] = struct.unpack('d', cam.read(8))[0] 
         cam.seek(248)
-        param_depth['fy'] = struct.unpack('d', cam.read(8))[0] * 1.005
+        param_depth['fy'] = struct.unpack('d', cam.read(8))[0] 
         cam.seek(232)
         param_depth['cx'] = struct.unpack('d', cam.read(8))[0]
         cam.seek(256)
-        param_depth['cy'] = struct.unpack('d', cam.read(8))[0] - 35
+        param_depth['cy'] = struct.unpack('d', cam.read(8))[0] - 20
 
 
         cam.seek(664)
