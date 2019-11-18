@@ -132,7 +132,7 @@ class SimulatedToF(object):
         imgR_ori = imread(self.root + self.gt_path + token + '_rgb.png').astype(
             np.float32) / 255.
         gt_D_data = sio.loadmat(self.root + self.gt_path + token + '_gt_depth.mat')
-        gt_D = gt_D_data['gt_depth'].astype(np.float32) * self.plane_correction
+        gt_D = gt_D_data['gt_depth'].astype(np.float32) * self.plane_correction * 2
 
         imgL = imread(self.root + 'nToF/' + token + '_noisy_intensity.png').astype(np.float32)
         imgL = np.expand_dims(imgL, 2) / 255.
