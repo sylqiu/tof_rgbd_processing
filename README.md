@@ -22,7 +22,8 @@ You can download the RGB-Depth dataset (~20GB) [here](https://drive.google.com/d
 
 Note that our data generation follows the protocol from Su et al. Deep End-to-End Time-of-Flight Imaging, CVPR 2018.
 
-Note: In the Drive there is a calib.bin file, which should be used if mvg_aug is set to be true when training. There is another calib.bin file in the test_real folder, which contains a sample real test image. The calib.bin file there is for real calibration.
+## Additional tips
+p.s. In the Drive there is a calib.bin file, which should be used if mvg_aug is set to be true when training. There is another calib.bin file in the test_real folder, which contains a sample real test image. The calib.bin file there is for real calibration.
 
 -------------------
 For the most updated details about this work, please refer to the [arxiv paper](https://arxiv.org/abs/1909.07623). If you find this work useful, please cite
