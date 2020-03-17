@@ -16,9 +16,9 @@ Our trained model is provided [here](https://drive.google.com/drive/folders/1XAS
 
 ## ToF FlyingThings3D dataset
 
-You can download the RGB-Depth dataset (~20GB) [here](https://drive.google.com/drive/folders/1XASaOfcp3TzQJ0A2fMaXex-0eihha0vg?usp=sharing). The _loader.py_ file is responsible for loading this dataset. Since the original transient rendering is too large to host on Drive.
+You can download the RGB-Depth dataset (~20GB) [here](https://drive.google.com/drive/folders/1XASaOfcp3TzQJ0A2fMaXex-0eihha0vg?usp=sharing). The _loader.py_ file is responsible for loading this dataset. 
 
-**Update 17 March, 2020**: We provide the original blender&pbrt files in the same folder with code about generating the data. 
+**Update 17 March, 2020**: Since the original transient rendering is too large to host on Drive, we provide the original blender&pbrt files in the same Drive folder with code on generating the data. 
 
 Note that our data generation follows the protocol from Su et al. Deep End-to-End Time-of-Flight Imaging, CVPR 2018.
 
