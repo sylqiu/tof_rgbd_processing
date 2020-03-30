@@ -24,7 +24,7 @@ Note that our data generation follows the protocol from Su et al. Deep End-to-En
 
 ## Synthetic ToF Dataset Generation Using Blender and PBRT
 
-## Introduction
+### Introduction
 This repo contains the source and data files for generating synthetic ToF data.
 
 There are two major parts in the data generation pipeline:
@@ -58,7 +58,7 @@ The major files in repo is organized as follows:
  
 ```
 
-## Installation pre-requisite
+### Installation pre-requisite
 
 Tested under Ubuntu 14.04
 * MatLabEXR: <https://blog.csdn.net/lqhbupt/article/details/7867697> (in Chinese)
@@ -66,7 +66,7 @@ Tested under Ubuntu 14.04
 * Blender 2.7: <https://www.blender.org/> 
 
 
-## Workflow
+### Workflow
 
 1. Render ground truth depth images (no plane correction) using the Depth Pass in the Blender's Cycles renderer. In Blender's GUI, it is visible in the Node editor's Renderlayers viewport. 
 Make sure the "Use Nodes" is ticked. Set your camera position and hit the camera-shot button to render the image and save it into the path. 
@@ -87,11 +87,11 @@ which will produce by default 256 transient images in `$pwd`. Typically it taks 
 
 It is important that the _.blend_ file and _.pbrt_ file correspond to the same scene at the same camera viewpoint. There are differences between the coodinate system used by ___pbrt-v3-tof___ and __Blender__.  For example, if you want to produce a _.pbrt_ file from a _.blend_ file, first use Blender's "Export as _.obj_" function and choose the option "-Z forward & Y up", and then further transform it into _.pbrt_ using __obj2pbrt__ provided in the __pbrt-v3-tof__ package.  You often have to make sure the rendering result are consistent. If they are still not consistent, you may also want to check other parameters such as fov, image resolution, etc. in both Blender's setting and the setting in the _.pbrt_ file. As far as I know, blender refer to the horizontal dimension for FOV while pbrt uses the vertical dimension.
 
-## Material augmentation in .pbrt file
+### Material augmentation in .pbrt file
 
 In _/pbrt_material_augmentation_ we have some utility functions on augmenting material properties in .pbrt file using MatLab. What it does is to replace the material parameters with some prescribed or random numbers. You should refer to the format of .pbrt files in <https://www.pbrt.org/fileformat-v3.html>. Note in particular that a _.pbrt_ file can refer to other _.pbrt_ files. This will come handy if we have a material library _.pbrt_ file as we do assume here.
 
-## Additional Resources
+### Additional Resources
 
 * This pipeline is heavily influenced by Su et al.'s repo: <https://vccimaging.org/Publications/Su2018EndToEndTOF/>. You can find similar working examples and scene files there.
 * The principle of using transient rendering to approximate multi-path interference error in time-of-flight image is described in many places. See e.g. 
@@ -101,7 +101,7 @@ In _/pbrt_material_augmentation_ we have some utility functions on augmenting ma
 Transient rendering is briefly touched. For full reference, please go to <https://www.pbrt.org/>, one of the best expositions available online.
 * Blender tutorial: <https://www.youtube.com/user/AndrewPPrice>
 
-# calib.bin files
+## calib.bin files
 In the Drive folder there is a calib.bin file, which should be used if mvg_aug is set to be true when training. There is another calib.bin file in the test_real folder, which contains a sample real test image. The calib.bin file there is for real calibration.
 
 -------------------
