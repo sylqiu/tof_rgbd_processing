@@ -23,7 +23,6 @@ You can download the RGB-Depth dataset (~20GB) [here](https://drive.google.com/d
 Note that our data generation follows the protocol from Su et al. Deep End-to-End Time-of-Flight Imaging, CVPR 2018.
 
 ## Synthetic ToF Dataset Generation Using Blender and PBRT
-====
 
 ## Introduction
 This repo contains the source and data files for generating synthetic ToF data.
@@ -103,7 +102,7 @@ In _/pbrt_material_augmentation_ we have some utility functions on augmenting ma
 Transient rendering is briefly touched. For full reference, please go to <https://www.pbrt.org/>, one of the best expositions available online.
 * Blender tutorial: <https://www.youtube.com/user/AndrewPPrice>
 
-## Additional tips
+# calib.bin files
 In the Drive folder there is a calib.bin file, which should be used if mvg_aug is set to be true when training. There is another calib.bin file in the test_real folder, which contains a sample real test image. The calib.bin file there is for real calibration.
 
 -------------------
