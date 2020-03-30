@@ -69,7 +69,6 @@ Tested under Ubuntu 14.04
 ## Workflow
 
 1. Render ground truth depth images (no plane correction) using the Depth Pass in the Blender's Cycles renderer. In Blender's GUI, it is visible in the Node editor's Renderlayers viewport. 
-![](feat/DepthPass.png)
 Make sure the "Use Nodes" is ticked. Set your camera position and hit the camera-shot button to render the image and save it into the path. 
 
 The python script for producing this procedure without using the GUI is given in _blender_utils/output_zpass.py_. The termnial command is 
